@@ -1,11 +1,26 @@
 {
   "name": "img2ascii",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "Convert images url to ascii art",
+  "main": "img2ascii.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "bin": "./img2ascii.js",
+  "author": "syzer",
+  "license": "ISC",
+  "keywords": [
+    "ascii",
+    "image",
+    "convert",
+    "terminal",
+    "convert ascii",
+    "download image"
+  ],
+  "dependencies": {
+    "gm": "^1.21.1",
+    "picture-tube": "^1.0.0",
+    "request-promise": "^2.0.0",
+    "yargs": "^3.32.0"
+  }
 }
