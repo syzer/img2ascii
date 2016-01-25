@@ -1,5 +1,6 @@
 # WAT
 Downloads images jpeg/gif/png and outputs them in your console
+![Doge In terminal](https://syzer.github.com/img2ascii/doge.png)
 
 # HOW
 ```bash
