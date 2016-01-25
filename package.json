@@ -1,6 +1,6 @@
 {
   "name": "img2ascii",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert images url to ascii art",
   "main": "img2ascii.js",
   "scripts": {
@@ -17,6 +17,13 @@
     "convert ascii",
     "download image"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syzer/img2ascii.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/syzer/img2ascii/issues"
+  },
   "dependencies": {
     "gm": "^1.21.1",
     "picture-tube": "^1.0.0",

@@ -4,6 +4,7 @@ Downloads images jpeg/gif/png and outputs them in your console
 
 # HOW
 ```bash
+brew install graphicsmagick
 npm i -g img2ascii
 img2acii URL
 ```
