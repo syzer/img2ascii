@@ -4,7 +4,7 @@
 const gm = require('gm');
 const pictureTube = require('picture-tube');
 const argv = require('yargs')
-    .usage('Usage: $0 [url] --cols [num]')
+    .usage('Usage: $0 [url|file] --cols [num] --ratio [num]')
     .option('c', {
         alias: 'cols',
         default: 80,
