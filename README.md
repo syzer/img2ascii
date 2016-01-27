@@ -24,7 +24,7 @@ img2ascii doge.png --cols 20 --ratio 0.5
 
 # Usage
 ```bash
-Usage: img2ascii.js [url] --cols [num]
+Usage: img2ascii.js [url|file] --cols [num] --ratio [num]
 
 Options:
   -c, --cols   how many cols in terminal                           [default: 80]
