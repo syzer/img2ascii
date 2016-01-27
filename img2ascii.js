@@ -10,6 +10,11 @@ const argv = require('yargs')
         default: 80,
         describe: 'how many cols in terminal'
     })
+    .option('r', {
+        alias: 'ratio',
+        default: 1,
+        describe: 'ratio try 0.5 to flatten image\n and 2 to lengthen iamge'
+    })
     .demand(1)
     .argv;
 
@@ -21,7 +26,8 @@ const pipeIn = (isUrl(argv._[0]) ?
     .on('error', err => {throw new Error(err)});
 
 gm(pipeIn)
-    .resize(240, 240)
+    // magic fix of picture tube ratios
+    .resizeExact(300 * 1.2, 300 * argv.ratio)
     .stream('png')
     .pipe(pictureTube({cols: argv.cols}))
     .pipe(process.stdout);
