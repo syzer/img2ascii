@@ -4,6 +4,7 @@
 [![Dependency Status](https://david-dm.org/syzer/img2ascii.svg)](https://david-dm.org/syzer/img2ascii)
 [![Downloads Today](https://img.shields.io/npm/dt/img2ascii.svg)](https://badge.fury.io/js/img2ascii)
 [![Downloads Month](https://img.shields.io/npm/dm/img2ascii.svg)](https://badge.fury.io/js/img2ascii)
+[![Build Status](https://img.shields.io/travis/syzer/img2ascii.svg)](https://badge.fury.io/js/img2ascii)
 
 ## Purpose
 Downloads images (jpeg/gif/png) and outputs them in your console.
