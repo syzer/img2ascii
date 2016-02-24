@@ -34,3 +34,8 @@ img2ascii doge.png
 img2ascii https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg
 img2ascii doge.png --cols 20 --ratio 0.5
 ```
+
+## Why
+
+- Make custom ssh login message for your users.
+- Picture is worth thousands words.. we will use both!
