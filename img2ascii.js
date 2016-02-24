@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
+const errMsg = require('./errorMsg');
 const gm = require('gm');
 const pictureTube = require('picture-tube');
 const argv = require('yargs')
@@ -18,12 +19,13 @@ const argv = require('yargs')
     .demand(1)
     .argv;
 
+process.on('uncaughtException', errMsg.printErr);
+
 const isUrl = (str) => str.match('http|0.0|localhost');
 
 const pipeIn = (isUrl(argv._[0]) ?
     require('request-promise')(argv._[0]) :
-    require('fs').createReadStream(argv._[0]))
-    .on('error', err => {throw new Error(err)});
+    require('fs').createReadStream(argv._[0]));
 
 gm(pipeIn)
     // magic fix of picture tube ratios
