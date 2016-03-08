@@ -3,8 +3,7 @@ module.exports.printErr = function (err) {
     console.error('Error:');
 
     if ('ENOENT' === err.code && 'open' !== err.syscall) {
-        console.dir(err);
-        console.error('Please install graphicsmagick');
+        console.error('Please install graphicsmagick:');
         console.error('brew install graphicsmagick');
         console.error('sudo apt-get install graphicsmagick');
     }
@@ -15,5 +14,4 @@ module.exports.printErr = function (err) {
 
     console.dir(err.message);
 
-    process.exit(1);
 };
