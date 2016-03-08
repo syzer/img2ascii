@@ -43,7 +43,7 @@ img2ascii doge.png --cols 20 --ratio 0.5
 ```js
 const img2ascii = require('img2ascii')({
     img: './assets/snafu.gif',
-    cols: 90                    // optional,
+    cols: 90,                   // optional
     ratio: 1.2                  // optional
 }).pipe(process.stdout)
 ```
