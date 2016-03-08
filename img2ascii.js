@@ -1,35 +1,24 @@
-#!/usr/bin/env node
-'use strict';
+module.exports = function img2ascii(config) {
+    'use strict';
 
-const errMsg = require('./errorMsg');
-const gm = require('gm');
-const pictureTube = require('picture-tube');
-const argv = require('yargs')
-    .usage('Usage: $0 [url|file] --cols [num] --ratio [num]')
-    .option('c', {
-        alias: 'cols',
-        default: 80,
-        describe: 'how many cols in terminal'
-    })
-    .option('r', {
-        alias: 'ratio',
-        default: 1,
-        describe: 'ratio try 0.5 to flatten image\n and 2 to lengthen image'
-    })
-    .demand(1)
-    .argv;
+    const argv = {
+        ratio: config.ratio,
+        cols: config.cols,
+        _: [config.img]
+    };
+    const gm = require('gm');
+    const pictureTube = require('picture-tube');
 
-process.on('uncaughtException', errMsg.printErr);
+    const isUrl = (str) => str.match('http|0.0|localhost');
 
-const isUrl = (str) => str.match('http|0.0|localhost');
+    const pipeIn = (isUrl(argv._[0]) ?
+        require('request-promise')(argv._[0]) :
+        require('fs').createReadStream(argv._[0]));
 
-const pipeIn = (isUrl(argv._[0]) ?
-    require('request-promise')(argv._[0]) :
-    require('fs').createReadStream(argv._[0]));
-
-gm(pipeIn)
+    return gm(pipeIn)
     // magic fix of picture tube ratios
-    .resizeExact(300 * 1.2, 300 * argv.ratio)
-    .stream('png')
-    .pipe(pictureTube({cols: argv.cols}))
-    .pipe(process.stdout);
+        .resizeExact(300 * 1.2, 300 * argv.ratio)
+        .stream('png')
+        .pipe(pictureTube({cols: argv.cols}))
+};
+
