@@ -4,7 +4,7 @@
   "description": "Convert images (local or url) to ascii art",
   "main": "img2ascii.js",
   "scripts": {
-    "start": "node bin ./doge.png"
+    "start": "node bin ./doge.png",
     "test": "node test.js"
   },
   "bin": "bin.js",
