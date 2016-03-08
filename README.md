@@ -21,7 +21,7 @@ brew install graphicsmagick
 npm install -g img2ascii
 ```
 
-## Usage
+## Usage CLI
 ```sh
 Usage: img2ascii [url|file] --cols [num] --ratio [num]
 
@@ -36,4 +36,14 @@ Options:
 img2ascii doge.png
 img2ascii https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg
 img2ascii doge.png --cols 20 --ratio 0.5
+```
+
+## Usage as module
+
+```js
+const img2ascii = require('img2ascii')({
+    img: './assets/snafu.gif',
+    cols: 90                    // optional,
+    ratio: 1.2                  // optional
+}).pipe(process.stdout)
 ```
