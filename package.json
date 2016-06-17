@@ -30,8 +30,8 @@
   "dependencies": {
     "gm": "^1.21.1",
     "picture-tube": "^1.0.0",
-    "request-promise": "^2.0.0",
-    "yargs": "^3.32.0"
+    "request-promise": "^3.0.0",
+    "yargs": "^4.7.1"
   },
   "devDependencies": {
     "tap": "^5.7.0"
