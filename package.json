@@ -31,7 +31,7 @@
     "gm": "^1.21.1",
     "picture-tube": "^1.0.0",
     "request-promise": "^4.1.1",
-    "yargs": "^3.32.0"
+    "yargs": "^4.8.1"
   },
   "devDependencies": {
     "tap": "^7.0.1"
