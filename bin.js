@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-'use strict';
+'use strict'
 
-const errMsg = require('./errorMsg');
+const errMsg = require('./errorMsg')
 const argv = require('yargs')
     .usage('Usage: $0 [url|file] --cols [num] --ratio [num]')
     .option('c', {
@@ -15,9 +15,9 @@ const argv = require('yargs')
         describe: 'ratio try 0.5 to flatten image\n and 2 to lengthen image'
     })
     .demand(1)
-    .argv;
+    .argv
 
-process.on('uncaughtException', errMsg.printErr);
+process.on('uncaughtException', errMsg.printErr)
 
 const img2ascii = require('./img2ascii')(argv)
-    .pipe(process.stdout);
+    .pipe(process.stdout)
