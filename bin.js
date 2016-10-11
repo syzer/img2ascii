@@ -11,7 +11,7 @@ const argv = require('yargs')
     .option('r', {
         alias: 'ratio',
         default: 1,
-        describe: 'Aspect ratio. Try 0.5 to flatten image\n and 2 to lengthen image'
+        describe: 'Aspect ratio. Try 0.5 to flatten image\nand 2 to lengthen image'
     })
     .demand(1)
     .argv

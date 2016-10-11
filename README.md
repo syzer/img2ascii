@@ -26,9 +26,9 @@ npm install -g img2ascii
 Usage: img2ascii [url|file] --cols [num] --ratio [num]
 
 Options:
-  -c, --cols   how many cols in terminal                           [default: 80]
-  -r, --ratio  ratio try 0.5 to flatten image
-               and 2 to lengthen image                             [default: 1]
+  -c, --cols   Number of columns in terminal                       [default: 80]
+  -r, --ratio  Aspect ratio. Try 0.5 to flatten image
+               and 2 to lengthen image                              [default: 1]
 ```
 
 ## Examples
