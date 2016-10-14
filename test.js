@@ -7,13 +7,13 @@ tap.test('Probably fine', t => {
     t.end()
 })
 
-tap.test('Network call', t =>
+tap.test('File load', t =>
     require('./img2ascii')({
-        _: ['https://www.google.ch/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'],
-        c: 30,
-        cols: 30,
-        r: 0.6,
-        ratio: 0.6,
+        _: ['doge.png'],
+        c: 40,
+        cols: 40,
+        r: 0.8,
+        ratio: 0.8,
     }).on('end', () => {
         t.pass('Volkswagen')
         t.end()
