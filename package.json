@@ -1,6 +1,6 @@
 {
   "name": "img2ascii",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Convert images (local or url) to ascii art",
   "main": "img2ascii.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "url": "https://github.com/syzer/img2ascii/issues"
   },
   "dependencies": {
-    "gm": "^1.21.1",
+    "gm": "^1.23.0",
     "picture-tube": "^1.0.0",
     "request": "^2.75.0",
     "request-promise": "^4.1.1",
