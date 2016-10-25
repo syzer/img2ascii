@@ -35,6 +35,6 @@
     "yargs": "^6.0.0"
   },
   "devDependencies": {
-    "tap": "^7.0.1"
+    "tap": "^8.0.0"
   }
 }
