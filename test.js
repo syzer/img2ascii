@@ -7,7 +7,7 @@ tap.test('Probably fine', t => {
     t.end()
 })
 
-tap.test('File load', t =>
+tap.test('File load .png', t =>
     require('./img2ascii')({
         _: ['doge.png'],
         c: 40,
@@ -17,5 +17,14 @@ tap.test('File load', t =>
     }).on('end', () => {
         t.pass('Volkswagen')
         t.end()
-    }).pipe(process.stdout)
-)
+    }).pipe(process.stdout))
+
+tap.test('File load .jpg', t =>
+    require('./img2ascii')({
+        _: ['frost-doge.jpg'],
+        c: 40,
+        cols: 40
+    }).on('end', () => {
+        t.pass('Volkswagen')
+        t.end()
+    }).pipe(process.stdout))
