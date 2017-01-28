@@ -18,7 +18,9 @@
     "convert ascii",
     "download image",
     "ascii art",
-    "such cli"
+    "such cli",
+    "image to ascii",
+    "server hello"
   ],
   "repository": {
     "type": "git",
