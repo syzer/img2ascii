@@ -1,5 +1,7 @@
 # img2ascii
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/syzer/img2ascii.svg)](https://greenkeeper.io/)
+
 [![NPM Version](https://badge.fury.io/js/img2ascii.svg)](https://badge.fury.io/js/img2ascii)
 [![Dependency Status](https://david-dm.org/syzer/img2ascii.svg)](https://david-dm.org/syzer/img2ascii)
 [![Downloads Today](https://img.shields.io/npm/dt/img2ascii.svg)](https://badge.fury.io/js/img2ascii)
