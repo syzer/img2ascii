@@ -3,7 +3,7 @@ os: osx
 language: node_js
 osx_image: xcode8.2
 node_js:
-  - '6'
+  - '8'
 env:
   - CXX=g++-4.8
 addons:

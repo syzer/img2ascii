@@ -1,17 +1,16 @@
-module.exports.printErr = function (err) {
+module.exports.printErr = (err) => {
 
-    console.error('Error:')
+  console.error('Error:')
 
-    if ('ENOENT' === err.code && 'open' !== err.syscall) {
-        console.error('Please install graphicsmagick:')
-        console.error('brew install graphicsmagick')
-        console.error('sudo apt-get install graphicsmagick')
-    }
+  if ('ENOENT' === err.code && 'open' !== err.syscall) {
+    console.error('Please install graphicsmagick:')
+    console.error('brew install graphicsmagick')
+    console.error('sudo apt-get install graphicsmagick')
+  }
 
-    if ('ENOTFOUND' === err.code) {
-        console.log('Please check your uri / network connection')
-    }
+  if ('ENOTFOUND' === err.code) {
+    console.log('Please check your uri / network connection')
+  }
 
-    console.dir(err.message)
-
+  console.dir(err.message)
 }

@@ -1,6 +1,6 @@
 {
   "name": "img2ascii",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Convert images (local or url) to ascii art",
   "main": "img2ascii.js",
   "scripts": {
@@ -37,6 +37,8 @@
     "yargs": "^6.5.0"
   },
   "devDependencies": {
+    "finalhandler": "^1.1.0",
+    "serve-static": "^1.13.2",
     "tap": "^8.0.1"
   }
 }
