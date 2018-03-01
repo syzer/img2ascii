@@ -36,7 +36,7 @@ tap.test('Load remote file', t => {
   const serveStatic = require('serve-static')
   const serve = serveStatic('./')
 
-  const server =  http
+  const server = http
     .createServer((req, res) =>
       serve(req, res, finalhandler(req, res)))
     .listen(port)
