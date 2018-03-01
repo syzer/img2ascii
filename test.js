@@ -1,4 +1,6 @@
 const tap = require('tap')
+const { spawn } = require('child_process')
+
 process.argv.push('doge.png')
 
 tap.test('Probably fine', t => {
@@ -32,13 +34,13 @@ tap.test('File load .jpg', t =>
 tap.test('Load remote file', t => {
   const http = require('http')
   const port = process.env.PORT || 5397
-  const finalhandler = require('finalhandler')
+  const finalHandler = require('finalhandler')
   const serveStatic = require('serve-static')
   const serve = serveStatic('./')
 
   const server = http
     .createServer((req, res) =>
-      serve(req, res, finalhandler(req, res)))
+      serve(req, res, finalHandler(req, res)))
     .listen(port)
 
   require('./img2ascii')({
@@ -51,3 +53,12 @@ tap.test('Load remote file', t => {
     t.end()
   }).pipe(process.stdout)
 })
+
+tap.test('Not existing files .jpg', t =>
+  spawn('./bin.js', ['not-existing-file.jpg'])
+    .stderr
+    .on('data', (err) => {
+      t.pass('Finishes correctly with error', err.toString())
+      t.end()
+    })
+    .pipe(process.stdout))

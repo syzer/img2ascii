@@ -1,6 +1,6 @@
 module.exports.printErr = (err) => {
 
-  console.error('Error:')
+  console.error('Error:', err)
 
   if ('ENOENT' === err.code && 'open' !== err.syscall) {
     console.error('Please install graphicsmagick:')
@@ -12,5 +12,5 @@ module.exports.printErr = (err) => {
     console.log('Please check your uri / network connection')
   }
 
-  console.dir(err.message)
+  process.exit(1)
 }

@@ -1,6 +1,6 @@
 {
   "name": "img2ascii",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Convert images (local or url) to ascii art",
   "main": "img2ascii.js",
   "scripts": {

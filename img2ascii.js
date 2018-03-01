@@ -7,7 +7,7 @@ module.exports = (config) => {
   const gm = require('gm')
   const pictureTube = require('picture-tube')
 
-  const isUrl = (str) => str.match(/^http|0\.0|1..\.|localhost/)
+  const isUrl = (str) => str.match(/^(http|0\.0|1..\.|localhost)/)
 
   const pipeIn = (isUrl(argv._[0]) ?
     require('request-promise')(argv._[0]) :
