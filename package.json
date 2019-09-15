@@ -39,6 +39,6 @@
   "devDependencies": {
     "finalhandler": "^1.1.0",
     "serve-static": "^1.13.2",
-    "tap": "^10.3.2"
+    "tap": "^14.6.3"
   }
 }
